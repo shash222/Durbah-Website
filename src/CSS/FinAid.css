@@ -1,0 +1,17 @@
+#financialAidForm {
+    margin: auto;
+    width: 750px;
+    height: 195vh;
+}
+
+#financialAidFormHeading {
+    margin-bottom: 0;
+}
+
+#financialAidFormHeadingSubtext {
+    margin-top: 0;
+}
+
+#financialAidHeader {
+    width: 50%;
+}

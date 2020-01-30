@@ -1,0 +1,88 @@
+#upcomingSeminarBottomContainer {
+    display: flex;
+}
+
+#seminarFlyer {
+    width: 100%;
+}
+
+.upcomingSeminarContent {
+    flex-direction: row;
+    width: 33.3%;
+    padding: 2vw;
+    margin: 0;
+}
+
+#upcomingSeminarLeft {
+    text-align: center;
+}
+
+#seminarPromoVideo {
+    width: 40vw;
+    height: 20vw;
+
+    /* width: 320px;
+    height: 179px; */
+    margin: 2vh auto;
+}
+
+#seminarName{
+    margin: 0;
+    padding: 0;
+}
+
+#seminarInstructor{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#aboutInstructor {
+    width:80%;
+    float: right;
+}
+
+.upcomingSeminarButton {
+    margin-top: 2vw;
+    width: 100px;
+    background-color: purple;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    float: right;
+}
+
+#instructorImage {
+    width: 60%;
+    position: relative;
+    margin-left: 20px;
+    border-radius: 150px;
+    border: 1px solid purple;
+}
+
+#upcomingSeminarTopContainer {
+    text-align: center;
+    border: 2px solid black;
+    border-top: 0;
+    width: 124.75%;
+    margin-left: -12.5%;
+    margin-top: -2vh;
+}
+
+#seminarDescription {
+    text-align: justify;
+    padding-top: 30px;
+}
+
+#instructorDescription {
+    text-align: justify;
+    padding-top: 30px;
+}
+
+#upcomingSeminarRight  {
+    text-align: right;
+}
+
+#instructorName {
+    font-size: 20px;
+}

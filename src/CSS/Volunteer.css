@@ -1,0 +1,13 @@
+#volunteerForm {
+    margin: auto;
+    width: 750px;
+    height: 195vh;
+}
+
+#volunteerFormHeading {
+    margin-bottom: 0;
+}
+
+#volunteerFormHeadingSubtext {
+    margin-top: 0;
+}

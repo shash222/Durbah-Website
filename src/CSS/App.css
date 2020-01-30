@@ -1,0 +1,13 @@
+html {
+  overflow-y: scroll;
+}
+
+#body {
+  margin:auto;
+}
+
+.container {
+  padding: 0 10%;
+  margin: auto;
+  padding-top: 2vh;
+}

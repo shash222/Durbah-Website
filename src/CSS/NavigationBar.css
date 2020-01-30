@@ -1,0 +1,26 @@
+#navLinksList {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    width: 60%;
+    float: right;
+    line-height:2.25vh;
+    padding-top:2vw;
+    margin:0;
+}
+
+.navElements {
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+
+.navLink {
+    font-size: 1.25vw;
+    text-decoration: none;
+    color: white;
+}
+
+.navLink:hover {
+    color:purple;
+}

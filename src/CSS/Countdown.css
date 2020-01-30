@@ -1,0 +1,18 @@
+.countdown {
+    padding: 0 10px;
+    font-size:3vw;
+    text-align: center;
+}
+
+.countdownHeading {
+    text-align: center;
+}
+
+.countdownOutput {
+    text-align: center;
+    margin:auto;
+}
+
+.datePassedMessage {
+    font-size: 30px;
+}
