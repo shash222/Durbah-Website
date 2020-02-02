@@ -24,32 +24,34 @@
 .countdownHeading p {
     margin: 0;
     padding: 0;
-    font-size: 90px;
+    font-size: 6vw;
     font-family: agency;
 }
 
 .countdownContainer {
-    margin-top: 18vh;
     position: absolute;
-    top: 40%;
+    top: 17vw;
     width: 80%;
     margin: auto;
 }
 
 @media (orientation: portrait) {
     #homeImage {
-        height: 110%;
+        height: 90vh;
+        width: 175vh;
+        margin-left: -25vh;
+        margin-top: -10vh;
     }
 
     .countdownHeading p {
-        font-size: 15px;
+        font-size: 34px;
     }
 
     .countdownContainer {
         position: absolute;
-        top: 8vh;
-        width: 80%;
+        top: 14vh;
         margin: auto;
      
     }
+    
 }

@@ -33,3 +33,7 @@ html {
   font-family: agency;
   src: url('../Res/fonts/agencyfb-regular.otf')
 }
+
+#body {
+  padding-top: 10vh;
+}

@@ -28,7 +28,7 @@
     font-size: 4vw;
 }
 
-#seminarCountdown .countdownOutput #timeUnit td {
+#seminarCountdown .countdownOutput .timeUnit {
     font-size: 1.5vw;
 }
 
@@ -100,9 +100,6 @@
 
 #instructorName {
     font-size: 20px;
-}
-
-.seminarDescriptions {
 }
 
 @media (orientation: portrait) {

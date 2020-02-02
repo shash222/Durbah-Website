@@ -1,29 +1,63 @@
 .countdown {
-    width: 250px;
     font-size:6vw;
-    text-align: center;
+    width: 20vw;
     font-family: swisCnBt;
     font-weight: bold;;
     color: #032436;
 }
 
 .countdownOutput {
+    display: flex;
     text-align: center;
-    margin:auto;
+}
+
+.countdownOutput div {
+    flex-direction: row;
 }
 
 .datePassedMessage {
     font-size: 30px;
 }
 
-.countdownOutput #timeUnit td {
+.countdownOutput .timeUnit {
     font-family: agency;
     font-size: 4vw;
     color: lightgrey;
 }
 
+.countdownOutput p {
+    margin: 0;
+}
+
 @media (orientation: portrait) {
-    .countdown {
-        font-size: 3vh;
+    #homeCountdownContainer .countdown {
+        font-size: 6vh;
+        width: auto;
+        text-align: center;
     }
+
+    #homeCountdownContainer .countdownOutput {
+        flex-direction: column;
+    }
+    
+    .timeUnit {
+        text-align: center;
+    }
+
+    .countdownOutput div p {
+        display: block;
+    }
+    
+    #homeCountdownContainer .countdownOutput div {
+        margin: 2.5vh 0;
+    }
+
+    #upcomingSeminarTopContainer #seminarCountdown .countdown {
+        font-size: 6vw;
+    }
+
+    #upcomingSeminarTopContainer #seminarCountdown .timeUnit {
+        font-size: 4vw;
+    }
+
 }

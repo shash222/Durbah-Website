@@ -38,22 +38,63 @@ export default class Countdown extends Component {
                 {
                     this.state.timeRemaining == null
                         ? <p className="countdownOutput datePassedMessage">{this.state.datePassedMessage}</p>
-                        : (<table className="countdownOutput">
-                                <tbody>
-                                    <tr>
-                                        <td className="countdown">{this.state.timeRemaining.daysRemaining}</td>
-                                        <td className="countdown">{this.state.timeRemaining.hoursRemaining}</td>
-                                        <td className="countdown">{this.state.timeRemaining.minutesRemaining}</td>
-                                        <td className="countdown">{this.state.timeRemaining.secondsRemaining}</td>
-                                    </tr>
-                                    <tr id="timeUnit">
-                                        <td>DAYS</td>
-                                        <td>HOURS</td>
-                                        <td>MINUTES</td>
-                                        <td>SECONDS</td>
-                                    </tr>
-                                </tbody>
-                            </table>)
+                        : (
+                            // <table className="countdownOutput">
+                            //     <tbody>
+                            //         <tr>
+                            //             <td className="countdown">{this.state.timeRemaining.daysRemaining}</td>
+                            //             <td className="countdown">{this.state.timeRemaining.hoursRemaining}</td>
+                            //             <td className="countdown">{this.state.timeRemaining.minutesRemaining}</td>
+                            //             <td className="countdown">{this.state.timeRemaining.secondsRemaining}</td>
+                            //         </tr>
+                            //         <tr id="timeUnit">
+                            //             <td>DAYS</td>
+                            //             <td>HOURS</td>
+                            //             <td>MINUTES</td>
+                            //             <td>SECONDS</td>
+                            //         </tr>
+                            //     </tbody>
+                            // </table>
+
+
+
+                            // <div className="countdownOutput">
+                            //     <div id="countdownContainer">
+                            //         <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
+                            //         <p className="countdown">{this.state.timeRemaining.hoursRemaining}</p>
+                            //         <p className="countdown">{this.state.timeRemaining.minutesRemaining}</p>
+                            //         <p className="countdown">{this.state.timeRemaining.secondsRemaining}</p>
+                            //     </div>
+                            //     <div id="timeUnit">
+                            //         <p>DAYS</p>
+                            //         <p>HOURS</p>
+                            //         <p>MINUTES</p>
+                            //         <p>SECONDS</p>
+                            //     </div>
+                            // </div>
+                            
+                            
+                            <div className="countdownOutput">
+                                <div>
+                                    <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
+                                    <p className="timeUnit">DAYS</p>
+                                </div>
+                                <div>
+                                    <p className="countdown">{this.state.timeRemaining.hoursRemaining}</p>
+                                    <p className="timeUnit">HOURS</p>
+                                </div>
+                                <div>
+                                    <p className="countdown">{this.state.timeRemaining.minutesRemaining}</p>
+                                    <p className="timeUnit">MINUTES</p>
+                                </div>
+                                <div>
+                                    <p className="countdown">{this.state.timeRemaining.secondsRemaining}</p>
+                                    <p className="timeUnit">SECONDS</p>
+                                </div>
+                            </div>
+                            
+                            
+                            )
                 }
             </div>
         )

@@ -40,13 +40,24 @@ header {
 @media (orientation: portrait) {
 
     #headerLogoLink {
+        width: 100%;
         margin:auto;
     }
 
     header {
         text-align: center;
-        height: 3vh;
+        height: 8vh;
         width: 100%;
         margin: auto;
     }
+
+    #qabeelatDurbahText {
+        font-size: 4.5vw;
+    }
+    
+    #qabeelatDurbahSubtext {
+        font-size: 2.25vw;
+        font-weight: lighter;
+    }    
+
 }

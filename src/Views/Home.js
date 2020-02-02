@@ -20,7 +20,7 @@ export default class Home extends Component {
                     <Countdown datePassedMessage="Unfortunately, the exam is now closed" endDate={new Date(examData.examDeadline)}/>
                 </div> */}
                 {/* <div id="countdownSpacer"></div> */}
-                <div className="countdownContainer">
+                <div className="countdownContainer" id="homeCountdownContainer">
                     <div className="countdownHeading">
                         <p className="countdownUntil" id="countdownUntilSeminar">COUNTDOWN UNTIL</p>
                         <p className="countdownItem">{seminarData.seminarName.toUpperCase()}</p>

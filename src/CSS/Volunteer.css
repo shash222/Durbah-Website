@@ -24,4 +24,12 @@
         margin-left: -10%;
         height: 100vh;
     }
+
+    #volunteerFormHeading {
+        font-size: 5vh;
+    }
+
+    #volunteerFormHeadingSubtext {
+        font-size: 2.5vh;
+    }
 }
