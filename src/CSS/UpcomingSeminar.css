@@ -1,5 +1,6 @@
 #upcomingSeminarBottomContainer {
     display: flex;
+    margin-top: 5vw;
 }
 
 #seminarFlyer {
@@ -13,13 +14,27 @@
     margin: 0;
 }
 
+#upcomingSeminarContainer {
+    font-family: 'agency';
+    font-size: 20px;
+    margin-top: -1vw;
+}
+
 #upcomingSeminarLeft {
     text-align: center;
 }
 
+#seminarCountdown .countdown {
+    font-size: 4vw;
+}
+
+#seminarCountdown .countdownOutput #timeUnit td {
+    font-size: 1.5vw;
+}
+
 #seminarPromoVideo {
-    width: 40vw;
-    height: 20vw;
+    width: 68vw;
+    height: 34vw;
 
     /* width: 320px;
     height: 179px; */
@@ -39,6 +54,7 @@
 
 #aboutInstructor {
     width:80%;
+    font-size: 20px;
     float: right;
 }
 
@@ -62,19 +78,18 @@
 
 #upcomingSeminarTopContainer {
     text-align: center;
-    border: 2px solid black;
     border-top: 0;
-    width: 124.75%;
-    margin-left: -12.5%;
-    margin-top: -2vh;
+    height: 90vh;
 }
 
 #seminarDescription {
+    font-family: swisCnBt;
     text-align: justify;
     padding-top: 30px;
 }
 
 #instructorDescription {
+    font-family: swisCnBt;
     text-align: justify;
     padding-top: 30px;
 }
@@ -85,4 +100,28 @@
 
 #instructorName {
     font-size: 20px;
+}
+
+.seminarDescriptions {
+}
+
+@media (orientation: portrait) {
+    #upcomingSeminarTopContainer {
+        height: fit-content;
+    }
+
+    #upcomingSeminarBottomContainer {
+        flex-direction: column;
+    }
+
+    .upcomingSeminarContent {
+        width: 100%;
+        border-top: 1px solid black;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    #seminarFlyer {
+        width: 75%;
+    }
 }

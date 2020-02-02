@@ -3,11 +3,10 @@
 }
 
 #homeImage {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-    /* margin-top: -2vh; */
-    opacity: .4;
+    width: 120vw;
+    margin-top: -6vw;
+    opacity: .8;
+    margin-left: -15%;
 }
 
 #countdownUntilExamDeadline  {
@@ -15,19 +14,42 @@
 }
 
 #countdownUntilSeminar  {
-    color: grey;
+    color: lightgrey;
 }
 
 .countdownItem {
     color: purple;
 }
 
-.countdownContainer {
-    padding-top: 22vh;
-}
-
 .countdownHeading p {
     margin: 0;
     padding: 0;
-    font-size: 25px;
+    font-size: 90px;
+    font-family: agency;
+}
+
+.countdownContainer {
+    margin-top: 18vh;
+    position: absolute;
+    top: 40%;
+    width: 80%;
+    margin: auto;
+}
+
+@media (orientation: portrait) {
+    #homeImage {
+        height: 110%;
+    }
+
+    .countdownHeading p {
+        font-size: 15px;
+    }
+
+    .countdownContainer {
+        position: absolute;
+        top: 8vh;
+        width: 80%;
+        margin: auto;
+     
+    }
 }

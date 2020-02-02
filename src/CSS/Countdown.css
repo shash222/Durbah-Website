@@ -1,11 +1,10 @@
 .countdown {
-    padding: 0 10px;
-    font-size:3vw;
+    width: 250px;
+    font-size:6vw;
     text-align: center;
-}
-
-.countdownHeading {
-    text-align: center;
+    font-family: swisCnBt;
+    font-weight: bold;;
+    color: #032436;
 }
 
 .countdownOutput {
@@ -15,4 +14,16 @@
 
 .datePassedMessage {
     font-size: 30px;
+}
+
+.countdownOutput #timeUnit td {
+    font-family: agency;
+    font-size: 4vw;
+    color: lightgrey;
+}
+
+@media (orientation: portrait) {
+    .countdown {
+        font-size: 3vh;
+    }
 }

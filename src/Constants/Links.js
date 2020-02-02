@@ -1,10 +1,10 @@
 export default  {
     links: [
-        {path: "/", name: "Home", component: "Home"},
-        {path: "/UpcomingSeminar", name: "Upcoming Seminar", component: "UpcomingSeminar"},
+        {path: "/", name: "HOME", component: "Home"},
+        {path: "/UpcomingSeminar", name: "UPCOMING SEMINAR", component: "UpcomingSeminar"},
         // {path: "/ExamResources", name: "Exam Resources", component: "ExamRes"},
-        {path: "/Volunteer", name: "Volunteer", component: "Volunteer"},
-        {path: "/FinancialAid", name: "Financial Aid", component: "FinAid"},
+        {path: "/Volunteer", name: "VOLUNTEER", component: "Volunteer"},
+        {path: "/FinancialAid", name: "FINANCIAL AID", component: "FinAid"},
         // {path: "/About", name: "About", component: "About"},
         // {path: "/Donate", name: "Donate", component: "Donate"},
     ],

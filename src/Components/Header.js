@@ -13,7 +13,7 @@ export default class Header extends Component {
                         <p id="qabeelatDurbahSubtext" className="headerLogoText">ALMAGHRIB INSTITUTE-NEW JERSEY CHAPTER</p>
                     </div>
                 </NavLink>
-                <NavigationBar />
+                <NavigationBar isPortrait={window.matchMedia("(orientation: portrait)").matches}/>
             </header>
         );
     }

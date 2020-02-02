@@ -6,7 +6,6 @@ import data from './Constants/Links.js';
 import Footer from './Components/Footer';
 
 export default class App extends Component {
-
   state = {
     views: [],
   };

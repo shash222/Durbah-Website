@@ -1,17 +1,32 @@
 #financialAidForm {
     margin: auto;
-    width: 750px;
+    width: 100%;
+    max-width: 750px;
     height: 195vh;
 }
 
 #financialAidFormHeading {
+    font-family: swisBlkcnBt;
     margin-bottom: 0;
+    font-size: 3.5vw;
+    color: purple;
 }
 
 #financialAidFormHeadingSubtext {
+    font-family: swisLtcnBt;
+    font-size: 1vw;
+    width: 50%;
     margin-top: 0;
 }
 
 #financialAidHeader {
-    width: 50%;
+    width: 100%;
+}
+
+@media (orientation: portrait) {
+    #financialAidForm {
+        width: 120%;
+        margin-left: -10%;
+        height: 100vh;
+    }
 }

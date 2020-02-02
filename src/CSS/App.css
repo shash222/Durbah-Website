@@ -4,10 +4,32 @@ html {
 
 #body {
   margin:auto;
+  padding: 0 10%;
+  padding-top: 6vw;
+  overflow-x: hidden;
 }
 
 .container {
-  padding: 0 10%;
   margin: auto;
-  padding-top: 2vh;
+  min-height: 75vh;
+}
+
+@font-face {
+  font-family: swisBlkcnBt;
+  src: url('../Res/fonts/swis721-blkcn-bt-black.ttf');
+}
+
+@font-face {
+  font-family: swisCnBt;
+  src: url('../Res/fonts/swis721-cn-bt-roman.ttf')
+}
+
+@font-face {
+  font-family: swisLtcnBt;
+  src: url('../Res/fonts/swis721-ltcn-bt-light.ttf')
+}
+
+@font-face {
+  font-family: agency;
+  src: url('../Res/fonts/agencyfb-regular.otf')
 }

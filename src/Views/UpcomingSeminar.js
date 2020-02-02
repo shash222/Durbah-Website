@@ -11,9 +11,9 @@ export default class UpcomingSeminar extends Component {
         console.log("Populating");
     }
 
-    render() {     
+    render() {
         return (
-            <div className="container">
+            <div className="container" id="upcomingSeminarContainer">
                 <div id="upcomingSeminarTopContainer">
                     <div id="seminarCountdown">
                         <Countdown datePassedMessage="" endDate={new Date(seminarData.seminarDate + " " + seminarData.seminarTime)}/>
@@ -27,15 +27,15 @@ export default class UpcomingSeminar extends Component {
                     <div id="upcomingSeminarMiddle" className="upcomingSeminarContent">
                         <h1 id="seminarName">{seminarData.seminarName}</h1>
                         <h2 id="seminarInstructor">Taught By {seminarData.seminarInstructor}</h2>
-                        <p id="seminarDescription">{seminarData.seminarDescription}</p>
+                        <p id="seminarDescription" className="seminarDescriptions">{seminarData.seminarDescription}</p>
                         <a href={seminarData.registrationLink} target="_blank" rel="noopener noreferrer"><div id="registerButton" className="upcomingSeminarButton">Read More & Register</div></a>
                     </div>
                     <div id="upcomingSeminarRight" className="upcomingSeminarContent">
                         <div id="aboutInstructor">
                             <h3 id="aboutInstructorHeading">ABOUT THE INSTRUCTOR</h3>
-                            <Img id="instructorImage" roundedSize="2" src={(seminarData.instructorImageLocation)} alt="Seminar Flyer" />
+                            <Img id="instructorImage" src={(seminarData.instructorImageLocation)} alt="Seminar Flyer" />
                             <p id="instructorName">{seminarData.seminarInstructor.toUpperCase()}</p>
-                            <div id="instructorDescription">{seminarData.aboutInstructor}</div>
+                            <p id="instructorDescription" className="seminarDescriptions">{seminarData.aboutInstructor}</p>
                             <a href={seminarData.moreAboutInstructorLink} target="_blank" rel="noopener noreferrer"><div className="upcomingSeminarButton">Read More</div></a>
                         </div>
                     </div>

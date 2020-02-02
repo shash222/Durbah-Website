@@ -1,14 +1,26 @@
 .socialMediaLogo {
     width: 35px;
     padding: 7px;
-}
-
-#socialMediaContainer{
     margin-top: 10px;
 }
 
 footer {
+    width: 100%;
     border-top: 1px solid black;
-    margin-top: 5vh;
     text-align: center;
+    background-color: white;
+}
+
+footer p {
+    margin:0;
+}
+
+@media (orientation: portrait) {
+    .socialMediaLogo {
+        width: 20px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
 }

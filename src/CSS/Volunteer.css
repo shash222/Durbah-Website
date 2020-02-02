@@ -1,13 +1,27 @@
 #volunteerForm {
     margin: auto;
-    width: 750px;
+    width: 100%;
+    max-width: 750px;
     height: 195vh;
 }
 
 #volunteerFormHeading {
+    font-family: swisBlkcnBt;
     margin-bottom: 0;
+    font-size: 3.5vw;
+    color: purple;
 }
 
 #volunteerFormHeadingSubtext {
+    font-family: swisLtcnBt;
+    font-size: 1.05vw;
     margin-top: 0;
+}
+
+@media (orientation: portrait) {
+    #volunteerForm {
+        width: 120%;
+        margin-left: -10%;
+        height: 100vh;
+    }
 }

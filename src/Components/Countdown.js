@@ -10,7 +10,12 @@ export default class Countdown extends Component {
     }
 
     state = {
-        timeRemaining: {},
+        timeRemaining: {
+            daysRemaining: "00",
+            hoursRemaining: "00",
+            minutesRemaining: "00",
+            secondsRemaining: "00",
+        },
     };
 
     componentDidMount() {
@@ -29,7 +34,7 @@ export default class Countdown extends Component {
     
     render() {
         return(
-            <div>
+            <div className="countdownComponent">
                 {
                     this.state.timeRemaining == null
                         ? <p className="countdownOutput datePassedMessage">{this.state.datePassedMessage}</p>
@@ -41,7 +46,7 @@ export default class Countdown extends Component {
                                         <td className="countdown">{this.state.timeRemaining.minutesRemaining}</td>
                                         <td className="countdown">{this.state.timeRemaining.secondsRemaining}</td>
                                     </tr>
-                                    <tr>
+                                    <tr id="timeUnit">
                                         <td>DAYS</td>
                                         <td>HOURS</td>
                                         <td>MINUTES</td>
