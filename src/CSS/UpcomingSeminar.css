@@ -17,7 +17,6 @@
 #upcomingSeminarContainer {
     font-family: 'agency';
     font-size: 20px;
-    margin-top: -1vw;
 }
 
 #upcomingSeminarLeft {
@@ -30,15 +29,6 @@
 
 #seminarCountdown .countdownOutput .timeUnit {
     font-size: 1.5vw;
-}
-
-#seminarPromoVideo {
-    width: 68vw;
-    height: 34vw;
-
-    /* width: 320px;
-    height: 179px; */
-    margin: 2vh auto;
 }
 
 #seminarName{
@@ -111,11 +101,23 @@
         flex-direction: column;
     }
 
+    #seminarName {
+        font-size: 9vw;
+    }
+
+    #seminarInstructor {
+        font-size: 7vw;
+    }
+
     .upcomingSeminarContent {
         width: 100%;
         border-top: 1px solid black;
         margin-top: 20px;
         padding-top: 20px;
+    }
+
+    .seminarDescriptions {
+        font-size: 5vw;
     }
 
     #seminarFlyer {

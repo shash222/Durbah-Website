@@ -18,7 +18,7 @@ export default class UpcomingSeminar extends Component {
                     <div id="seminarCountdown">
                         <Countdown datePassedMessage="" endDate={new Date(seminarData.seminarDate + " " + seminarData.seminarTime)}/>
                     </div>
-                    <Iframe id="seminarPromoVideo" src={seminarData.promoVideoUrl} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></Iframe>
+                    <Iframe id="seminarPromoVideo" className="video" src={seminarData.promoVideoUrl} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></Iframe>
                 </div>
                 <div id="upcomingSeminarBottomContainer">
                     <div id="upcomingSeminarLeft" className="upcomingSeminarContent">
@@ -28,7 +28,7 @@ export default class UpcomingSeminar extends Component {
                         <h1 id="seminarName">{seminarData.seminarName}</h1>
                         <h2 id="seminarInstructor">Taught By {seminarData.seminarInstructor}</h2>
                         <p id="seminarDescription" className="seminarDescriptions">{seminarData.seminarDescription}</p>
-                        <a href={seminarData.registrationLink} target="_blank" rel="noopener noreferrer"><div id="registerButton" className="upcomingSeminarButton">Read More & Register</div></a>
+                        <a href={seminarData.registrationLink} target="_blank" rel="noopener noreferrer"><div id="registerButton" className="upcomingSeminarButton">Register</div></a>
                     </div>
                     <div id="upcomingSeminarRight" className="upcomingSeminarContent">
                         <div id="aboutInstructor">

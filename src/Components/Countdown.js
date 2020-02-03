@@ -20,6 +20,20 @@ export default class Countdown extends Component {
 
     componentDidMount() {
         // var seminarDate = new Date(seminarData.seminarDate + " " + seminarData.seminarTime);
+        // var endDate = this.state.endDate;
+        // var timeRemainingObj;
+        // if (new Date() < endDate) {
+        //     setInterval(() => {
+        //         timeRemainingObj = countdownUtility.calculateTimeRemaining(endDate);
+        //         this.setState({timeRemaining: timeRemainingObj});
+        //     }, 1000)
+        // } else {
+        //     this.setState({timeRemaining: null});
+        // }
+        this.calculateTimeRemaining();
+    }
+    
+    calculateTimeRemaining() {
         var endDate = this.state.endDate;
         var timeRemainingObj;
         if (new Date() < endDate) {
@@ -31,7 +45,7 @@ export default class Countdown extends Component {
             this.setState({timeRemaining: null});
         }
     }
-    
+
     render() {
         return(
             <div className="countdownComponent">

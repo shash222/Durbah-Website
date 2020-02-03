@@ -74,43 +74,53 @@
     }
 
     #navLinksList {
-        width:100px;
+        width:30vw;
         background-color: purple;
         opacity: .9;
         height:100vh;
         display: block;
-        animation-name: closeMenu;
+        /* animation-name: closeMenu;
         animation-duration: 1s;
-        animation-fill-mode: forwards;
+        animation-fill-mode: forwards; */
         padding-top:8vh;
     }
 
     .navElements {
         flex-direction: column;
-        margin-bottom: 10px;
+        margin-bottom: 7vw;
     }
 
     .navLink {
-        font-size: 10px;
+        font-size: 5vw;
     }
 
     .navLink:hover {
         color: white;
     }
 
+    .navLink.activeView {
+        text-decoration: underline;
+    }
+
     #navLinksList.openMenu {
         animation-name: openMenu;
-        animation-duration: 1s;
+        animation-duration: .5s;
+        animation-fill-mode:forwards;
+    }
+
+    #navLinksList.closeMenu {
+        animation-name: closeMenu;
+        animation-duration: .5s;
         animation-fill-mode:forwards;
     }
 
     @keyframes openMenu {
         from {margin-left:0;}
-        to {margin-left:-100px;}
+        to {margin-left:-30vw;}
     }
 
     @keyframes closeMenu {
-        from {margin-left:-100px;}
+        from {margin-left:-30vw;}
         to {margin-left:0;}
     }
 

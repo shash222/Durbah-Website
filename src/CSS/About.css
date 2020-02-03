@@ -1,0 +1,60 @@
+#aboutBottomContainer {
+    display: flex;
+    padding-bottom: 20vh;
+
+}
+
+.aboutContent {
+    flex-direction: row;
+    width: 33.3%;
+    padding: 2vw;
+    margin: 0;
+}
+
+.aboutContent p  {
+    font-family: swisCnBt;
+    text-align: justify;
+}
+
+#aboutContainer {
+    font-family: 'agency';
+    font-size: 20px;
+}
+
+#alMaghribPromoVideo {
+    width: 60vw;
+    height: 30vw;  
+}
+
+
+@media (orientation: portrait) {
+    #aboutTopContainer {
+        height: fit-content;
+    }
+
+    #aboutBottomContainer {
+        flex-direction: column;
+        padding-bottom: 0;;
+    }
+
+    .aboutContent {
+        width: 100%;
+        border-top: 1px solid black;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .aboutContent p {
+        font-size: 5vw;
+    }
+
+    #alMaghribPromoVideo {
+        width: 70vw;
+        height: 35vw;  
+    }
+    
+    .aboutContent h2 {
+        font-size: 8vw;
+    }
+
+}

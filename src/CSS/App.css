@@ -37,3 +37,52 @@ html {
 #body {
   padding-top: 10vh;
 }
+
+.pageHeading {
+  font-family: swisBlkcnBt;
+  margin-bottom: 0;
+  font-size: 2.5vw;
+  color: purple;
+} 
+
+.pageHeadingSubtext {
+  font-family: swisLtcnBt;
+  font-size: 1.05vw;
+  margin-top: 0;
+  width: 50%;
+}
+
+.form {
+  margin: auto;
+  width: 100%;
+  max-width: 750px;
+  height: 195vh;
+}
+
+.video {
+  width: 68vw;
+  height: 34vw;
+
+  /* width: 320px;
+  height: 179px; */
+  margin: 2vh auto;
+
+}
+
+@media (orientation: portrait) {
+  .pageHeading {
+      font-size: 5vh;
+  }
+
+  .pageHeadingSubtext {
+      font-size: 2.5vh;
+      width: 90%;
+    }
+
+  .form {
+    width: 120%;
+    margin-left: -10%;
+    height: 100vh;
+
+  }
+}

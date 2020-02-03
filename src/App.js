@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import './CSS/App.css';
 import data from './Constants/Links.js';
 import Footer from './Components/Footer';
@@ -32,8 +32,9 @@ export default class App extends Component {
         <div id="body">
           <Switch>
             {data.links.map((link, i) => (
-              <Route key={link.name + "View"} path={link.path} exact component={this.state.views[i]}></Route>
+              <Route key={link.name + "View"} path={link.path} exact activeClassName="activeView" component={this.state.views[i]}></Route>
             ))}
+              <Route render={() => (<Redirect to="/" />)}/>
           </Switch>
         </div>
         <Footer />
