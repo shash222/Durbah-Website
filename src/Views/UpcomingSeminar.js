@@ -5,6 +5,10 @@ import '../CSS/UpcomingSeminar.css';
 import seminarData from '../Constants/UpcomingSeminarInfo.js';
 import Countdown from '../Components/Countdown.js';
 
+/**
+  * View provides information about the upcoming seminar
+  * Data can be modified in the ../Constants/UpcomingSeminarInfo.js file
+ */
 export default class UpcomingSeminar extends Component {
     // TODO: Will be used to programatically read from Al Maghrib Home Page and populate class info
     populateHomePage = () => {

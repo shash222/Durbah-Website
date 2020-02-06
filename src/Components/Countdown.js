@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import countdownUtility from '../Utilities/Countdown.js';
 import '../CSS/Countdown.css';
 
+/**
+ * Countdown component that returns time remaining between current and provided time
+ */
 export default class Countdown extends Component {
     constructor(props) {
         super(props);
@@ -9,6 +12,9 @@ export default class Countdown extends Component {
         this.state.datePassedMessage = props.datePassedMessage;
     }
 
+    /**
+     * State keeps track of each time duration remaining
+     */
     state = {
         timeRemaining: {
             daysRemaining: "00",
@@ -18,21 +24,16 @@ export default class Countdown extends Component {
         },
     };
 
+    /**
+     * Calculates time remaining before provided date as soon as component is mounted 
+     */
     componentDidMount() {
-        // var seminarDate = new Date(seminarData.seminarDate + " " + seminarData.seminarTime);
-        // var endDate = this.state.endDate;
-        // var timeRemainingObj;
-        // if (new Date() < endDate) {
-        //     setInterval(() => {
-        //         timeRemainingObj = countdownUtility.calculateTimeRemaining(endDate);
-        //         this.setState({timeRemaining: timeRemainingObj});
-        //     }, 1000)
-        // } else {
-        //     this.setState({timeRemaining: null});
-        // }
         this.calculateTimeRemaining();
     }
     
+    /**
+     * Calculates time  
+     */
     calculateTimeRemaining() {
         var endDate = this.state.endDate;
         var timeRemainingObj;

@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import Iframe from 'react-iframe';
 import '../CSS/FinAid.css'
 
+/**
+ * View used to display Financial Aid/Scholarship form
+ */
 export default class FinAid extends Component {
     render() {
         return(

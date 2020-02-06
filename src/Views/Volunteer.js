@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Iframe from 'react-iframe';
 import '../CSS/Volunteer.css'
 
+/**
+ * View used to display volunteer form
+ */
 export default class Volunteer extends Component {
     render() {
         return(
