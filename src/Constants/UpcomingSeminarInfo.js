@@ -1,3 +1,6 @@
+/**
+ * Constants file that provides info for upcoming seminar page
+ */
 export default {
     flyerLocation: "https://assets.almaghrib.org/img/common/courses/24-7/poster/sm.jpg",
     promoVideoUrl: "https://www.youtube.com/embed/3yeOrP165q8",

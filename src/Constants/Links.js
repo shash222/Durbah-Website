@@ -1,3 +1,7 @@
+/**
+ * Constants file that enables/disables links and website paths
+ * The navigation bar lists the links in the order shown below
+ */
 export default  {
     links: [
         {path: "/", name: "Home", component: "Home"},

@@ -20,6 +20,7 @@
 
 .countdownItem {
     color: purple;
+    text-shadow: -.2vw .2vw .5vw black;
 }
 
 .countdownHeading p {

@@ -8,17 +8,29 @@ export default class NavigationBar extends Component {
         isPortrait: false,
     }
 
+    /**
+     * 
+     * @param {*} props props passed from parent element to current component
+     * Binds javascript methods to component instance
+     */
     constructor(props) {
         super(props);
         this.toggleMenu = this.toggleMenu.bind(this);
         this.changeMenuButton = this.changeMenuButton.bind(this);
     }
 
+    /**
+     * Adds event listener to 'resize' event to determine whether mobile or desktop version of 
+     * NavigationBar needs to load
+     */
     componentDidMount() {
         window.addEventListener('resize', this.setScreenOrientation);
-        this.setState({ isPortrait: this.props.isPortrait });
+        this.setScreenOrientation();
     }
 
+    /**
+     * Updates state with screen orientation every time screen is resized
+     */
     setScreenOrientation = () => {
         if (window.matchMedia("(orientation: portrait)").matches) {
             this.setState({ isPortrait: true });
@@ -27,11 +39,11 @@ export default class NavigationBar extends Component {
         }
     }
 
+    /**
+     * Opens and closes Navigation Bar menu on mobile version of website
+     * Is called when hamburger menu is selected or closed
+     */
     toggleMenu() {
-        // document.getElementById("navLinksList").classList.toggle("openMenu");
-        /*
-            Adds the appropriate
-         */
         var navLinksList = document.getElementById("navLinksList");
         if (navLinksList.classList.contains("openMenu")) {
             navLinksList.classList.remove("openMenu");
@@ -42,8 +54,12 @@ export default class NavigationBar extends Component {
         } else {
             navLinksList.classList.add("openMenu");
         }
-  }
+        this.changeMenuButton();
+    }
 
+    /**
+     * Returns navigation bar links to be displayed
+     */
     getNavItems() {
         return (
             <ul id='navLinksList'>
@@ -54,11 +70,19 @@ export default class NavigationBar extends Component {
         )
     }
 
+    /**
+     * Changes menu button from hamburger menu to 'X' and vice versa on mobile version
+     */
     changeMenuButton() {
-        this.toggleMenu();
+        // this.toggleMenu();
         document.getElementById("menuButton").classList.toggle("change");
     }
 
+    /**
+     * Renders either desktop or mobile version of navigation bar
+     * Desktop version always has navigation bar elements available
+     * Mobile version only displays navigation bar after hamburger menu button is selected
+     */
     render() {
         return (
             <nav id="navigationBarContainer">
@@ -66,7 +90,7 @@ export default class NavigationBar extends Component {
                     (this.state.isPortrait)
                         ? (
                             <div>
-                                <div id="menuButton" onClick={this.changeMenuButton}>
+                                <div id="menuButton" onClick={this.toggleMenu}>
                                     <div className="bar1"></div>
                                     <div className="bar2"></div>
                                     <div className="bar3"></div>

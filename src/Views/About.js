@@ -3,14 +3,14 @@ import Iframe from 'react-iframe';
 import AlMaghribInfo from '../Constants/AlMaghribInfo.js';
 import '../CSS/About.css';
 
+
+/**
+ * View used as About page
+ * Descriptions were copied from Al Maghrib website
+ */
 export default class About extends Component {
     render() {
         return(
-            // <div className="container" id="aboutTopContainer">
-            //     <h1 id="aboutPageHeading" className="pageHeading">ABOUT</h1>
-            //     <p id="aboutPageHeadingSubtext" className="pageHeadingSubtext">The vision of AlMaghrib Institute is to become the largest and most beneficial learning system in modern Islamic history. We envision our learning system entering every nation of the world, accessible to all who seek a deeper understanding of Islam.</p>
-            //     <Iframe id="alMaghribPromoVideo" className="video" src={AlMaghribInfo.promoVideoUrl} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></Iframe>
-            // </div>
             <div className="container" id="aboutContainer">
                 <div id="aboutTopContainer">
                     <h1 id="aboutPageHeading" className="pageHeading">ABOUT</h1>
