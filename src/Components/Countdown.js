@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import countdownUtility from '../Utilities/Countdown.js';
+import React, { Component } from 'react';
+// import countdownUtility from '../Utilities/Countdown.js';
 import '../CSS/Countdown.css';
 
 /**
@@ -30,65 +30,77 @@ export default class Countdown extends Component {
     componentDidMount() {
         this.calculateTimeRemaining();
     }
-    
+
+    getCurrentDateTimeInEST() {
+        // -5.0 refers to EST
+        var offset = -5.0;
+        var clientDate = new Date();
+        var  utc = clientDate.getTime() + (clientDate.getTimezoneOffset() * 60000);
+        var serverDate = new Date(utc + (3600000*offset));
+        return new Date(serverDate);
+    }
+
+    addLeadingZero(num) {
+        if (num < 10) return "0" + num;
+        return num;
+    }
+
     /**
-     * Calculates time  
+     * 
+     * @param {*} endDate end date to determine countdown until
+     * Calculates the time remaining between the current date and the provided end date
+     */
+    calculateTimeRemainingGivenEndDate(endDate) {
+        const oneMillisecond = 1;
+        const oneSecond = 1000 * oneMillisecond;
+        const oneMinute = 60 * oneSecond;
+        const oneHour = 60 * oneMinute;
+        const oneDay = 24 * oneHour;
+        const currentDateTimeEST = this.getCurrentDateTimeInEST();
+        var timeRemainingInMilliseconds = endDate - currentDateTimeEST;
+        const daysRemaining = Math.floor(timeRemainingInMilliseconds / oneDay);
+        timeRemainingInMilliseconds -= daysRemaining * oneDay;
+        const hoursRemaining = Math.floor(timeRemainingInMilliseconds / oneHour);
+        timeRemainingInMilliseconds -= hoursRemaining * oneHour;
+        const minutesRemaining = Math.floor(timeRemainingInMilliseconds / oneMinute);
+        timeRemainingInMilliseconds -= minutesRemaining * oneMinute;
+        const secondsRemaining = Math.floor(timeRemainingInMilliseconds / oneSecond);
+        timeRemainingInMilliseconds -= secondsRemaining * oneSecond;
+        return {
+                    daysRemaining: this.addLeadingZero(daysRemaining),
+                    hoursRemaining: this.addLeadingZero(hoursRemaining),
+                    minutesRemaining: this.addLeadingZero(minutesRemaining),
+                    secondsRemaining: this.addLeadingZero(secondsRemaining)
+        }
+    }
+
+    /**
+     * Calculates time remaining until provided time
      */
     calculateTimeRemaining() {
         var endDate = this.state.endDate;
         var timeRemainingObj;
         if (new Date() < endDate) {
             setInterval(() => {
-                timeRemainingObj = countdownUtility.calculateTimeRemaining(endDate);
-                this.setState({timeRemaining: timeRemainingObj});
+                timeRemainingObj = this.calculateTimeRemainingGivenEndDate(endDate);
+                this.setState({ timeRemaining: timeRemainingObj });
             }, 1000)
         } else {
-            this.setState({timeRemaining: null});
+            this.setState({ timeRemaining: null });
         }
     }
 
+    /**
+     * Divs are styled as flexbox; flex-direction is row for desktop version and and column
+     * for mobile
+     */
     render() {
-        return(
+        return (
             <div className="countdownComponent">
                 {
                     this.state.timeRemaining == null
                         ? <p className="countdownOutput datePassedMessage">{this.state.datePassedMessage}</p>
                         : (
-                            // <table className="countdownOutput">
-                            //     <tbody>
-                            //         <tr>
-                            //             <td className="countdown">{this.state.timeRemaining.daysRemaining}</td>
-                            //             <td className="countdown">{this.state.timeRemaining.hoursRemaining}</td>
-                            //             <td className="countdown">{this.state.timeRemaining.minutesRemaining}</td>
-                            //             <td className="countdown">{this.state.timeRemaining.secondsRemaining}</td>
-                            //         </tr>
-                            //         <tr id="timeUnit">
-                            //             <td>DAYS</td>
-                            //             <td>HOURS</td>
-                            //             <td>MINUTES</td>
-                            //             <td>SECONDS</td>
-                            //         </tr>
-                            //     </tbody>
-                            // </table>
-
-
-
-                            // <div className="countdownOutput">
-                            //     <div id="countdownContainer">
-                            //         <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
-                            //         <p className="countdown">{this.state.timeRemaining.hoursRemaining}</p>
-                            //         <p className="countdown">{this.state.timeRemaining.minutesRemaining}</p>
-                            //         <p className="countdown">{this.state.timeRemaining.secondsRemaining}</p>
-                            //     </div>
-                            //     <div id="timeUnit">
-                            //         <p>DAYS</p>
-                            //         <p>HOURS</p>
-                            //         <p>MINUTES</p>
-                            //         <p>SECONDS</p>
-                            //     </div>
-                            // </div>
-                            
-                            
                             <div className="countdownOutput">
                                 <div>
                                     <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
@@ -107,9 +119,7 @@ export default class Countdown extends Component {
                                     <p className="timeUnit">SECONDS</p>
                                 </div>
                             </div>
-                            
-                            
-                            )
+                        )
                 }
             </div>
         )

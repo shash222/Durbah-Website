@@ -5,6 +5,9 @@ import facebookLogo from '../Res/img/facebook.png';
 import instagramLogo from '../Res/img/instagram.png';
 import twitterLogo from '../Res/img/twitter.png';
 
+/**
+ * Footer component containing links to social media
+ */
 export default class Footer extends Component {
     render() {
         return(
