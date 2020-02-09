@@ -16,7 +16,13 @@
 }
 
 .datePassedMessage {
-    font-size: 30px;
+    font-size: 4vw;
+    text-align: center;
+    color: lightgrey;
+    text-shadow: -.2vw .2vw .5vw black;
+    font-family: agency;
+    font-weight: bold;
+    margin:0;
 }
 
 .countdownOutput .timeUnit {

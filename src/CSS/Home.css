@@ -23,6 +23,10 @@
     text-shadow: -.2vw .2vw .5vw black;
 }
 
+.liveText {
+    color: red;
+}
+
 .countdownHeading p {
     margin: 0;
     padding: 0;

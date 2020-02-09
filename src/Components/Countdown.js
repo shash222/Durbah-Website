@@ -99,7 +99,7 @@ export default class Countdown extends Component {
             <div className="countdownComponent">
                 {
                     this.state.timeRemaining == null
-                        ? <p className="countdownOutput datePassedMessage">{this.state.datePassedMessage}</p>
+                        ? <p className="datePassedMessage">{this.state.datePassedMessage}</p>
                         : (
                             <div className="countdownOutput">
                                 <div>

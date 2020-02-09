@@ -20,7 +20,7 @@ export default class UpcomingSeminar extends Component {
             <div className="container" id="upcomingSeminarContainer">
                 <div id="upcomingSeminarTopContainer">
                     <div id="seminarCountdown">
-                        <Countdown datePassedMessage="" endDate={new Date(seminarData.seminarDate + " " + seminarData.seminarTime)}/>
+                        <Countdown datePassedMessage={["THE CLASS IS NOW ", <span className="liveText">LIVE</span>]} endDate={new Date(seminarData.seminarDate + " " + seminarData.seminarTime)}/>
                     </div>
                     <Iframe id="seminarPromoVideo" className="video" src={seminarData.promoVideoUrl} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></Iframe>
                 </div>

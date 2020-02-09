@@ -92,6 +92,10 @@
     font-size: 20px;
 }
 
+.datePassedMessage {
+    text-shadow: none;
+}
+
 @media (orientation: portrait) {
     #upcomingSeminarTopContainer {
         height: fit-content;
