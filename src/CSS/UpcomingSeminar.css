@@ -24,7 +24,7 @@
 }
 
 #seminarCountdown .countdown {
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 #seminarCountdown .countdownOutput .timeUnit {
@@ -63,7 +63,7 @@
     position: relative;
     margin-left: 20px;
     border-radius: 150px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 #upcomingSeminarTopContainer {
@@ -93,7 +93,7 @@
 }
 
 .datePassedMessage {
-    text-shadow: none;
+    /* text-shadow: none; */
 }
 
 @media (orientation: portrait) {
@@ -118,6 +118,10 @@
         border-top: 1px solid black;
         margin-top: 20px;
         padding-top: 20px;
+    }
+
+    #seminarCountdown .countdownComponent .datePassedMessage {
+        font-size: 3.25vh;
     }
 
     .seminarDescriptions {

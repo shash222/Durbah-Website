@@ -4,6 +4,7 @@
 
 #homeImage {
     width: 120vw;
+    height: 92vh;
     margin-top: -6vw;
     opacity: .8;
     margin-left: -15%;
@@ -36,12 +37,17 @@
 
 .countdownContainer {
     position: absolute;
-    top: 17vw;
+    top: 10vw;
     width: 80%;
     margin: auto;
 }
 
 @media (orientation: portrait) {
+    #homeCountdownContainer .countdownComponent .datePassedMessage {
+        margin-top: 5px;
+        font-size: 4vh;
+    }
+
     #homeImage {
         height: 90vh;
         width: 175vh;
