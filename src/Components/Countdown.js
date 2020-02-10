@@ -74,6 +74,13 @@ export default class Countdown extends Component {
         }
     }
 
+    zeroTimeObject = {
+        daysRemaining: this.addLeadingZero(0),
+        hoursRemaining: this.addLeadingZero(0),
+        minutesRemaining: this.addLeadingZero(0),
+        secondsRemaining: this.addLeadingZero(0)
+    }
+
     /**
      * Calculates time remaining until provided time
      */
@@ -86,7 +93,7 @@ export default class Countdown extends Component {
                 this.setState({ timeRemaining: timeRemainingObj });
             }, 1000)
         } else {
-            this.setState({ timeRemaining: null });
+            this.setState({ timeRemaining: this.zeroTimeObject })
         }
     }
 
@@ -98,9 +105,10 @@ export default class Countdown extends Component {
         return (
             <div className="countdownComponent">
                 {
-                    this.state.timeRemaining == null
+                    this.state.timeRemaining === this.zeroTimeObject
                         ? <p className="datePassedMessage">{this.state.datePassedMessage}</p>
-                        : (
+                        : null }
+                        
                             <div className="countdownOutput">
                                 <div>
                                     <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
@@ -119,8 +127,6 @@ export default class Countdown extends Component {
                                     <p className="timeUnit">SECONDS</p>
                                 </div>
                             </div>
-                        )
-                }
             </div>
         )
     }
