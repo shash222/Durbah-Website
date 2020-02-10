@@ -2,7 +2,7 @@
  * Constants file that provides info for upcoming seminar page
  */
 export default {
-    flyerLocation: "https://assets.almaghrib.org/img/common/courses/24-7/poster/sm.jpg",
+    flyerLocation: "https://assets.almaghrib.org/img/common/courses/unbroken/poster/sm.jpg",
     promoVideoUrl: "https://www.youtube.com/embed/wxxMiLyiwMk",
     seminarName: "Unbroken: The Trials of Ayyub (as)",
     seminarInstructor: "Imam Omar Suleiman",
