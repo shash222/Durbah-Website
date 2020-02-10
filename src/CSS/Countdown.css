@@ -1,5 +1,5 @@
 .countdown {
-    font-size:4vw;
+    font-size:6vw;
     width: 20vw;
     font-family: swisCnBt;
     font-weight: bold;;
@@ -16,10 +16,10 @@
 }
 
 .datePassedMessage {
-    font-size: 3vw;
-    text-shadow: -.2vw .2vw .5vw black;
+    font-size: 4vw;
     text-align: center;
     color: lightgrey;
+    text-shadow: -.2vw .2vw .5vw black;
     font-family: agency;
     font-weight: bold;
     margin:0;
@@ -27,7 +27,7 @@
 
 .countdownOutput .timeUnit {
     font-family: agency;
-    font-size: 3vw;
+    font-size: 4vw;
     color: lightgrey;
 }
 

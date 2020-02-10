@@ -2,16 +2,16 @@
  * Constants file that provides info for upcoming seminar page
  */
 export default {
-    flyerLocation: "https://assets.almaghrib.org/img/common/courses/unbroken/poster/sm.jpg",
-    promoVideoUrl: "https://www.youtube.com/embed/wxxMiLyiwMk",
-    seminarName: "Unbroken: The Trials of Ayyub (as)",
-    seminarInstructor: "Imam Omar Suleiman",
-    seminarDescription: "Life isn’t always easy - it has its ups and downs. And everyone faces different challenges and crises unique to our own situations. Even the best of people, the prophets, faced life-changing trials and tribulations.As Muslims, it is up to us to change the way we face our challenges. To come out of every test with flying colors, unharmed and unbroken.",
-    seminarDate: "03/06/20",
+    flyerLocation: "https://assets.almaghrib.org/img/common/courses/24-7/poster/sm.jpg",
+    promoVideoUrl: "https://www.youtube.com/embed/3yeOrP165q8",
+    seminarName: "24/7: Fiqh of Du'a & Dhikr",
+    seminarInstructor: "Shaikh Waleed Basyouni",
+    seminarDescription: "It’s the most difficult relationship for many to maintain - the relationship with Allah. After many ups and downs, learn how to transform it once and for all. This class enters the world of Dua and Dhikr. You will learn how to keep your tongue moist with Dhikr, resuscitate Dua from robotic to passionate, and seamlessly remember Allah throughout your day. Learn the etiquette of Dua and its fiqh, and what to do when all hope is lost.",
+    seminarDate: "03/07/20",
     // Has to be in 24-hour time
     seminarTime: "19:30",
-    aboutInstructor: "Imam Omar Suleiman is the President of the Yaqeen Institute for Islamic Research and a professor of Islamic Studies at Southern Methodist University. He’s also the resident scholar of the Valley Ranch Islamic Center, and Co-Chair of Faith Forward Dallas at Thanks-Giving Square, a multi-faith alliance for peace and justice.",
+    aboutInstructor: "Vice-President of AlMaghrib Institute. Senior Scholar. Head of Islamic Theology and Ethics Department. Master’s in Islamic Theology, World Religions and Modern Religious Sects. PhD in Theology. Imam of Clear Lake Islamic Center. Director of Texas Da‘wah Convention. Gives fatwah as member of American Muslim Jurists Association (AMJA). Answers fiqh questions on Twitter.",
     registrationLink: "https://www.almaghrib.org/newjersey",
-    moreAboutInstructorLink: "https://www.almaghrib.org/instructors/omar-suleiman",
-    instructorImageLocation: "https://assets.almaghrib.org/img/common/instructors/omar-suleiman/standing.png",
+    moreAboutInstructorLink: "https://www.almaghrib.org/instructors/waleed-basyouni",
+    instructorImageLocation: "https://assets.almaghrib.org/img/common/instructors/waleed-basyouni/head.jpg",
 }
