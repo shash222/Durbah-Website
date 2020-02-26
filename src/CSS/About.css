@@ -21,11 +21,6 @@
     font-size: 20px;
 }
 
-#alMaghribPromoVideo {
-    width: 60vw;
-    height: 30vw;  
-}
-
 
 @media (orientation: portrait) {
     #aboutTopContainer {
@@ -46,11 +41,6 @@
 
     .aboutContent p {
         font-size: 5vw;
-    }
-
-    #alMaghribPromoVideo {
-        width: 70vw;
-        height: 35vw;  
     }
     
     .aboutContent h2 {

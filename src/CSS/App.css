@@ -4,7 +4,7 @@ html {
 
 #body {
   margin:auto;
-  padding: 0 10%;
+  padding: 0 10vw;
   padding-top: 6vw;
   overflow-x: hidden;
 }
@@ -85,4 +85,23 @@ html {
     height: 100vh;
 
   }
+
+  .video {
+    width: 98vw;
+    height: 49vw;
+    border: 1px solid black;
+    margin-left: -9vw;
+  }
+
+  #body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  
+  
 }

@@ -22,6 +22,7 @@ export default class Countdown extends Component {
             minutesRemaining: "00",
             secondsRemaining: "00",
         },
+        countdownComplete: false,
     };
 
     /**
@@ -31,12 +32,18 @@ export default class Countdown extends Component {
         this.calculateTimeRemaining();
     }
 
+    // componentDidUpdate() {
+    //     if (this.state.endDate <= new Date() && !this.state.countdownComplete) {
+    //         this.setState({ countdownComplete: true })
+    //     }
+    // }
+
     getCurrentDateTimeInEST() {
         // -5.0 refers to EST
         var offset = -5.0;
         var clientDate = new Date();
-        var  utc = clientDate.getTime() + (clientDate.getTimezoneOffset() * 60000);
-        var serverDate = new Date(utc + (3600000*offset));
+        var utc = clientDate.getTime() + (clientDate.getTimezoneOffset() * 60000);
+        var serverDate = new Date(utc + (3600000 * offset));
         return new Date(serverDate);
     }
 
@@ -58,6 +65,11 @@ export default class Countdown extends Component {
         const oneDay = 24 * oneHour;
         const currentDateTimeEST = this.getCurrentDateTimeInEST();
         var timeRemainingInMilliseconds = endDate - currentDateTimeEST;
+        console.log(timeRemainingInMilliseconds)
+        if (timeRemainingInMilliseconds < 1000) {
+            this.setState({ countdownComplete: true });
+            return this.zeroTimeObject
+        }
         const daysRemaining = Math.floor(timeRemainingInMilliseconds / oneDay);
         timeRemainingInMilliseconds -= daysRemaining * oneDay;
         const hoursRemaining = Math.floor(timeRemainingInMilliseconds / oneHour);
@@ -67,10 +79,10 @@ export default class Countdown extends Component {
         const secondsRemaining = Math.floor(timeRemainingInMilliseconds / oneSecond);
         timeRemainingInMilliseconds -= secondsRemaining * oneSecond;
         return {
-                    daysRemaining: this.addLeadingZero(daysRemaining),
-                    hoursRemaining: this.addLeadingZero(hoursRemaining),
-                    minutesRemaining: this.addLeadingZero(minutesRemaining),
-                    secondsRemaining: this.addLeadingZero(secondsRemaining)
+            daysRemaining: this.addLeadingZero(daysRemaining),
+            hoursRemaining: this.addLeadingZero(hoursRemaining),
+            minutesRemaining: this.addLeadingZero(minutesRemaining),
+            secondsRemaining: this.addLeadingZero(secondsRemaining)
         }
     }
 
@@ -88,12 +100,14 @@ export default class Countdown extends Component {
         var endDate = this.state.endDate;
         var timeRemainingObj;
         if (new Date() < endDate) {
-            setInterval(() => {
+            var countdown = setInterval(() => {
+                if (this.state.countdownComplete) clearInterval(countdown);
                 timeRemainingObj = this.calculateTimeRemainingGivenEndDate(endDate);
                 this.setState({ timeRemaining: timeRemainingObj });
             }, 1000)
         } else {
-            this.setState({ timeRemaining: this.zeroTimeObject })
+            // this.setState({ timeRemaining: this.zeroTimeObject })
+            this.setState({ countdownComplete: true })
         }
     }
 
@@ -105,28 +119,28 @@ export default class Countdown extends Component {
         return (
             <div className="countdownComponent">
                 {
-                    this.state.timeRemaining === this.zeroTimeObject
+                    this.state.countdownComplete
                         ? <p className="datePassedMessage">{this.state.datePassedMessage}</p>
-                        : null }
-                        
-                            <div className="countdownOutput">
-                                <div>
-                                    <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
-                                    <p className="timeUnit">DAYS</p>
-                                </div>
-                                <div>
-                                    <p className="countdown">{this.state.timeRemaining.hoursRemaining}</p>
-                                    <p className="timeUnit">HOURS</p>
-                                </div>
-                                <div>
-                                    <p className="countdown">{this.state.timeRemaining.minutesRemaining}</p>
-                                    <p className="timeUnit">MINUTES</p>
-                                </div>
-                                <div>
-                                    <p className="countdown">{this.state.timeRemaining.secondsRemaining}</p>
-                                    <p className="timeUnit">SECONDS</p>
-                                </div>
-                            </div>
+                        : null
+                }
+                <div className="countdownOutput">
+                    <div>
+                        <p className="countdown">{this.state.timeRemaining.daysRemaining}</p>
+                        <p className="timeUnit">DAYS</p>
+                    </div>
+                    <div>
+                        <p className="countdown">{this.state.timeRemaining.hoursRemaining}</p>
+                        <p className="timeUnit">HOURS</p>
+                    </div>
+                    <div>
+                        <p className="countdown">{this.state.timeRemaining.minutesRemaining}</p>
+                        <p className="timeUnit">MINUTES</p>
+                    </div>
+                    <div>
+                        <p className="countdown">{this.state.timeRemaining.secondsRemaining}</p>
+                        <p className="timeUnit">SECONDS</p>
+                    </div>
+                </div>
             </div>
         )
     }
