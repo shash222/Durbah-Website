@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Img from 'react-image';
 import Iframe from 'react-iframe';
 import '../CSS/UpcomingSeminar.css';
-import seminarData from '../Constants/UpcomingSeminarInfo.js';
+// import seminarData from '../Constants/UpcomingSeminarInfo.js';
 import Countdown from '../Components/Countdown.js';
 import axios from 'axios';
 
@@ -28,14 +28,11 @@ export default class UpcomingSeminar extends Component {
     };
     
     componentDidMount() {
-        console.log("Mounting");
-        axios.post("http://54.88.178.97:5000/upcomingSeminarData").then((res) => {
+        axios.post("https://server.durbah.org:5000/upcomingSeminarData").then((res) => {
             console.log(res);
-            // this.setState({seminarData: res})
-        }).finally(() => {
-            console.log("Hello");
+            this.setState({seminarData: res})
         })
-        this.setState({seminarData: seminarData})
+        // this.setState({seminarData: seminarData})
     }
 
     // TODO: Will be used to programatically read from Al Maghrib Home Page and populate class info
