@@ -5,8 +5,8 @@ const fs = require('fs');
 const https = require('https');
 
 const httpsOptions = {
-        cert: fs.readFileSync("/etc/letsencrypt/live/hashmi.site/fullchain.pem"),
-        key: fs.readFileSync("/etc/letsencrypt/live/hashmi.site/privkey.pem")
+        cert: fs.readFileSync("/etc/letsencrypt/live/durbah.org/fullchain.pem"),
+        key: fs.readFileSync("/etc/letsencrypt/live/durbah.org/privkey.pem")
 }
 
 https.createServer(httpsOptions, app).listen(port);
