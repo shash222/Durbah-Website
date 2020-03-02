@@ -29,7 +29,7 @@ export default class UpcomingSeminar extends Component {
     
     componentDidMount() {
         console.log("Mounting");
-        axios.post("http://54.88.178.97:5000/upcomingSeminarData").then((res) => {
+        axios.post("https://server.durbah.org:5000/upcomingSeminarData").then((res) => {
             console.log(res);
             // this.setState({seminarData: res})
         }).finally(() => {
