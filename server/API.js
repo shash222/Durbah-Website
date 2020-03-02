@@ -2,11 +2,14 @@ const express = require('express');
 const app = express();
 const port = 5000;
 const fs = require('fs');
-// const cors = require('cors');
+const https = require('https');
 
-app.listen(port, () => {
-    console.log("Server is running");
-});
+const httpsOptions = {
+        cert: fs.readFileSync("/etc/letsencrypt/live/hashmi.site/fullchain.pem"),
+        key: fs.readFileSync("/etc/letsencrypt/live/hashmi.site/privkey.pem")
+}
+
+https.createServer(httpsOptions, app).listen(port);
 
 var upcomingSeminarData = JSON.parse(fs.readFileSync("../constants/upcomingSeminarData.json"));
 
