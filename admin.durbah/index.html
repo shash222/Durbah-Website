@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #newSeminarDataForm{
+                position: relative;
+                width: 50%;
+            }
+            .formInput {
+                margin: 10px;
+                position: relative;
+            }
+
+            #instructions {
+                width: 50%;
+                border-collapse: collapse;
+                text-align: center;
+
+            }
+
+            #instructions td{
+                border: 1px solid black;
+            }
+
+            .instruction {
+                text-align: initial;
+            }
+
+            .instructionsHeading  {
+                font-weight: bold;
+            }
+
+            textarea {
+                width: 200px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="instructions">
+            <thead>
+                <tr>
+                    <td class="instructionsHeading">Element</td>
+                    <td class="instructionsHeading">How to find it</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="element">Flyer Location</td>
+                    <td class="instruction">
+                        <ol>
+                            <li>Go to <a href="AlMaghrib.org/">AlMaghrib.org/</a> and click on "Upcoming Events"</li>
+                            <li>Select the appropriate location (New Jersey)</li>
+                            <li>Right click on the flyer and select "Copy image address" and paste into form below</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="element">Promo Video URL</td>
+                    <td class="instruction">
+                        <ol>
+                            <li>Go to AlMaghrib.org and click on "Upcoming Events"</li>
+                            <li>Select the appropriate location (New Jersey) then click on "More Info"</li>
+                            <li>Right click on Youtube Video and select "Copy video URL" and paste into form below</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="element">Registration Link</td>
+                    <td class="instruction">
+                        <ol>
+                            <li>This should be location page (<a href="AlMaghrib.org/NewJersey">AlMaghrib.org/NewJersey</a>)</td></li>
+                        </ol>
+                </tr>
+                <tr>
+                    <td class="element">About Instructor Text</td>
+                    <td class="instruction">
+                        <ol>
+                            <li>Go to <a href="AlMaghrib.org/">AlMaghrib.org/</a> and click on "Instructors"</li>
+                            <li>Click on desired instructor and copy whatever portion of Instructor Bio to be displayed on website</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="element">Link to More About Instructor</td>
+                    <td class="instruction">
+                        <ol>
+                            <li>Go to <a href="AlMaghrib.org/">AlMaghrib.org/</a> and click on "Instructors"</li>
+                            <li>Click on desired instructor and copy URL in address box and paste into form below</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="element">Link to Instructor Image</td>
+                    <td class="instruction">
+                        <ol>
+                            <li>Go to <a href="AlMaghrib.org/">AlMaghrib.org/</a> and click on "Instructors"</li>
+                            <li>Click on desired instructor</li>
+                            <li>Right click on instructor image (may need to scroll down a bit) and select "Copy image address"</li>
+                            <li>Paste into form below</li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>***NOTE: Only boxes that are not empty will be replaced on the website***</b></p>
+        <form id="newSeminarDataForm">
+            Flyer Location: <input type="text" class="formInput" id="flyerLocation" name="flyerLocation" /><br>
+            Promo Video URL: <input type="text" class="formInput" id="promoVideoUrl" name="promoVideoUrl" /><br>
+            Seminar Name: <input type="text" class="formInput" id="seminarName" name="seminarName" /><br>
+            Seminar Instructor: <input type="text" class="formInput" id="seminarInstructor" name="seminarInstructor" /><br>
+            Seminar Description: <input type="text" class="formInput" id="seminarDescription" name="seminarDescription" /><br>
+            Seminar Date: <input type="date" class="formInput" id="seminarDate" name="seminarDate" /><br>
+            Seminar Start Time: <input type="time" class="formInput" id="seminarTime" name="seminarTime" /><br>
+            Registration Link: <input type="text" class="formInput" id="registrationLink" name="registrationLink" /><br>
+            About Instructor Text: <textarea class="formInput" id="aboutInstructor" name="aboutInstructor"></textarea><br>
+            Link to More About Instructor: <input type="text" class="formInput" id="moreAboutInstructorLink" name="moreAboutInstructorLink" /><br>
+            Link to Instructor Image: <input type="text" class="formInput" id="instructorImageLocation" name="instructorImageLocation" /><br>    
+            <input type="button" onclick="updateConstantsFile()" value="Submit"/>
+        </form>
+    </body>
+    <script src="javascript/index.js"></script>
+</html>
