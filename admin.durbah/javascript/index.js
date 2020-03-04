@@ -13,12 +13,12 @@ function updateConstantsFile() {
         }
     }
     console.log(updateObj);
-    fetch("https://server.durbah.org:5000/upcomingSeminarDataPost", {
+    fetch("https://server.durbah.org:5000/upcomingSeminarData", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(updateObj) // body data type must match "Content-Type" header
+	},
+	body: JSON.stringify(updateObj) // body data type must match "Content-Type" header
 
     }).then((response) => {
         console.log(response);

@@ -7,14 +7,14 @@ const cors = require('cors');
 
 const UPCOMING_SEMINAR_DATA_JSON_FILE_PATH = "../constants/upcomingSeminarData.json";
 
-const UPCOMING_SEMINAR_DATA_JSON_FILE_PATH = "../constants/upcomingSeminarData.json";
-
 const httpsOptions = {
         cert: fs.readFileSync("/etc/letsencrypt/live/durbah.org/fullchain.pem"),
         key: fs.readFileSync("/etc/letsencrypt/live/durbah.org/privkey.pem")
 }
 
 app.use(cors());
+
+app.use(require("body-parser").json())
 
 https.createServer(httpsOptions, app).listen(port);
 
@@ -24,7 +24,9 @@ app.get("/upcomingSeminarData", (req, res) => {
     res.send(upcomingSeminarData);
 })
 
-app.post("/upcomingSeminarDataPost", (req, res) => {
-    console.log(req.body);
-    // fs.writeFileSync(UPCOMING_SEMINAR_DATA_JSON_FILE_PATH)
+app.post("/upcomingSeminarData", (req, res) => {
+	Object.keys(req.body).map((key) => {
+		upcomingSeminarData[key] = req.body[key];
+	})
+    fs.writeFileSync(UPCOMING_SEMINAR_DATA_JSON_FILE_PATH, upcomingSeminarData);
 })
