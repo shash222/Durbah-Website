@@ -65,7 +65,6 @@ export default class Countdown extends Component {
         const oneDay = 24 * oneHour;
         const currentDateTimeEST = this.getCurrentDateTimeInEST();
         var timeRemainingInMilliseconds = endDate - currentDateTimeEST;
-        console.log(timeRemainingInMilliseconds)
         if (timeRemainingInMilliseconds < 1000) {
             this.setState({ countdownComplete: true });
             return this.zeroTimeObject

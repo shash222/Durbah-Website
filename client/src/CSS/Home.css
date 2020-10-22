@@ -10,11 +10,11 @@
     margin-left: -15%;
 }
 
-#countdownUntilExamDeadline  {
+#countdownUntilExamDeadline {
     color: purple;
 }
 
-#countdownUntilSeminar  {
+#countdownUntilSeminar {
     color: lightgrey;
     text-shadow: -.2vw .2vw .5vw black;
 }
@@ -37,7 +37,7 @@
 
 .countdownContainer {
     position: absolute;
-    top: 10vw;
+    top: 30vh;
     width: 80%;
     margin: auto;
 }
@@ -47,23 +47,18 @@
         margin-top: 5px;
         font-size: 4vh;
     }
-
     #homeImage {
         height: 90vh;
         width: 175vh;
         margin-left: -25vh;
         margin-top: -10vh;
     }
-
     .countdownHeading p {
         font-size: 34px;
     }
-
     .countdownContainer {
         position: absolute;
         top: 14vh;
         margin: auto;
-     
     }
-    
 }
